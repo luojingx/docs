@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{219:function(t,e,n){"use strict";n.r(e);var s=n(0),l=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("枚举: 表示数目有限,形式离散, 表达有几位明确的值")])])}),[],!1,null,null,null);e.default=l.exports}}]);
