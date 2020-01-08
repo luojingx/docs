@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>资料整理</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.67967071.css" as="style"><link rel="preload" href="/assets/js/app.3bc00f3d.js" as="script"><link rel="preload" href="/assets/js/2.b3504eca.js" as="script"><link rel="preload" href="/assets/js/16.6ebabfb2.js" as="script"><link rel="prefetch" href="/assets/js/10.e3709308.js"><link rel="prefetch" href="/assets/js/11.92c21dd8.js"><link rel="prefetch" href="/assets/js/12.6be84266.js"><link rel="prefetch" href="/assets/js/13.bd29dce9.js"><link rel="prefetch" href="/assets/js/14.1ab4b124.js"><link rel="prefetch" href="/assets/js/15.e1276eee.js"><link rel="prefetch" href="/assets/js/17.d987915a.js"><link rel="prefetch" href="/assets/js/18.36fe2855.js"><link rel="prefetch" href="/assets/js/19.39cef109.js"><link rel="prefetch" href="/assets/js/20.d4311a21.js"><link rel="prefetch" href="/assets/js/21.1d15e296.js"><link rel="prefetch" href="/assets/js/3.2aadfa07.js"><link rel="prefetch" href="/assets/js/4.d9354908.js"><link rel="prefetch" href="/assets/js/5.16e1a249.js"><link rel="prefetch" href="/assets/js/6.a681d768.js"><link rel="prefetch" href="/assets/js/7.bae3f3a2.js"><link rel="prefetch" href="/assets/js/8.efc01769.js"><link rel="prefetch" href="/assets/js/9.9b130e8a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.67967071.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">资料整理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/html/" class="sidebar-link">html</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/es6/" class="sidebar-link">es6</a></li><li><a href="/css/" class="sidebar-link">css</a></li><li><a href="/angular/" class="sidebar-link">angular</a></li><li><a href="/rxjs/" class="active sidebar-link">rxjs</a></li><li><a href="/git/" class="sidebar-link">git</a></li><li><a href="/webpack/" class="sidebar-link">webpack,gulp,grunt</a></li><li><a href="/gof/" class="sidebar-link">design patterns</a></li><li><a href="/nodejs/" class="sidebar-link">nodejs</a></li><li><a href="/linux/base.html" class="sidebar-link">shell</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>处理分发需求,毁掉,事件,订阅发布比较合适<br>
+处理流程性质的需求promise和generator比较合适<br>
+rxjs结合了两种模式<br>
+我们可以把一切的输入当做流来处理</p> <ul><li>用户操作</li> <li>网络响应</li> <li>定时器</li> <li>worker<br>
+Rxjs 提供了各种api来创建数据流</li> <li>单值: of, empty, never</li> <li>多值: from</li> <li>定时: interval,timer</li> <li>从事件创建:fromEvent</li> <li>从promise创建:fromPromise</li> <li>自定义创建: create<br>
+创建出来的数据流是一种可观察的序列,可以被订阅,可以做一些转换操作</li> <li>改变数据的形态: map, mapTo, pluck</li> <li>过滤一些值:filter,skip, first, lost, take</li> <li>时间轴上的操作: delay, timeout, throttle, debounce,  audit, bufferTime</li> <li>累加: reduce, scan</li> <li>异常处理: throw, catch, retry, finally</li> <li>条件执行: takeUntil, delayWhen, retryWhen, subscribeOn, observeOn</li> <li>转接: switch<br>
+也可以对若干个数据流进行组合</li> <li>concat: 保持原来的序列顺序连接两个数据流</li> <li>merge: 合并序列</li> <li>race: 预设条件为其中一个数据流完成</li> <li>forkJoin: 预设条件为所有数据流完成</li> <li>zip: 取个来源数据最后一个值合并为对象</li> <li>combinelatest: 取个来源数据最后一个值合并为数组<br>
+observable: 可观察序列,只出不进<br>
+Observer:观察者,只进不出<br>
+Subject: 可进可出可观察序列,可作为观察者<br>
+Subscribtion: 订阅关系,取消订阅</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/angular/" class="prev">angular</a></span> <span class="next"><a href="/git/">git</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="container" data-v-0178ff65><canvas id="live2d" width="280" height="250" class="live2d-right" data-v-0178ff65></canvas></div></div></div>
+    <script src="/assets/js/app.3bc00f3d.js" defer></script><script src="/assets/js/2.b3504eca.js" defer></script><script src="/assets/js/16.6ebabfb2.js" defer></script>
+  </body>
+</html>

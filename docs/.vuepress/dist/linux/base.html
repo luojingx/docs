@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shell | 资料整理</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.67967071.css" as="style"><link rel="preload" href="/assets/js/app.3bc00f3d.js" as="script"><link rel="preload" href="/assets/js/2.b3504eca.js" as="script"><link rel="preload" href="/assets/js/14.1ab4b124.js" as="script"><link rel="prefetch" href="/assets/js/10.e3709308.js"><link rel="prefetch" href="/assets/js/11.92c21dd8.js"><link rel="prefetch" href="/assets/js/12.6be84266.js"><link rel="prefetch" href="/assets/js/13.bd29dce9.js"><link rel="prefetch" href="/assets/js/15.e1276eee.js"><link rel="prefetch" href="/assets/js/16.6ebabfb2.js"><link rel="prefetch" href="/assets/js/17.d987915a.js"><link rel="prefetch" href="/assets/js/18.36fe2855.js"><link rel="prefetch" href="/assets/js/19.39cef109.js"><link rel="prefetch" href="/assets/js/20.d4311a21.js"><link rel="prefetch" href="/assets/js/21.1d15e296.js"><link rel="prefetch" href="/assets/js/3.2aadfa07.js"><link rel="prefetch" href="/assets/js/4.d9354908.js"><link rel="prefetch" href="/assets/js/5.16e1a249.js"><link rel="prefetch" href="/assets/js/6.a681d768.js"><link rel="prefetch" href="/assets/js/7.bae3f3a2.js"><link rel="prefetch" href="/assets/js/8.efc01769.js"><link rel="prefetch" href="/assets/js/9.9b130e8a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.67967071.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">资料整理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/html/" class="sidebar-link">html</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/es6/" class="sidebar-link">es6</a></li><li><a href="/css/" class="sidebar-link">css</a></li><li><a href="/angular/" class="sidebar-link">angular</a></li><li><a href="/rxjs/" class="sidebar-link">rxjs</a></li><li><a href="/git/" class="sidebar-link">git</a></li><li><a href="/webpack/" class="sidebar-link">webpack,gulp,grunt</a></li><li><a href="/gof/" class="sidebar-link">design patterns</a></li><li><a href="/nodejs/" class="sidebar-link">nodejs</a></li><li><a href="/linux/base.html" class="active sidebar-link">shell</a><ul class="sidebar-sub-headers"></ul></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="linux基本语法"><a href="#linux基本语法" class="header-anchor">#</a> linux基本语法</h3> <ul><li><p>#! /bin/bash  约定是linux shell文件</p></li> <li><p>./test.sh  执行文件</p></li> <li><p>变量  大小写字母下换线开头,包含大小写字母数字下划线</p></li> <li><p>定义变量 a='123' 使用变量 $a</p></li> <li><p>字符串  string=&quot;abcd&quot; 长度 ${#string}<br>
+子字符串 ${string:1:4}</p></li> <li><p>传参 $1, $2<br>
+./test.sh 1 2 3</p></li> <li><p>数组  array_name=(value1 ... valuen)<br>
+valuen=${array_name[n]}  lengthn=${#array_name[n]}</p></li> <li><p>基本运算  expr 是一款表达式计算工具 用expr来计算</p></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> <span class="token number">2</span> + <span class="token number">2</span><span class="token variable">`</span></span> 
+</code></pre></div><ul><li><ul><li><ul><li>/ % = == !=</li></ul></li></ul></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$a</span> <span class="token operator">==</span> <span class="token variable">$b</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">&quot;a 等于 b&quot;</span>
+</code></pre></div><ul><li><p>关系运算符<br>
+-eq相等  -ne不相等 -gt大于 -lt小于  -ge大于等于 -le小于等于</p></li> <li><p>布尔运算符<br>
+!非运算  -o或运算  -a与运算</p></li> <li><p>逻辑运算符<br>
+&amp;&amp;逻辑的 AND ||逻辑的 OR</p></li> <li><p>字符串运算符<br>
+=  !=  -z  -n  $</p></li> <li><p>文件测试运算符</p></li> <li><p>echo 指令用于字符串的输出</p></li> <li><p>printf 命令模仿 C  printf() 程序。</p></li> <li><p>test 命令用于检查某个条件是否成立</p></li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">if</span> <span class="token builtin class-name">test</span> $<span class="token punctuation">[</span>num1<span class="token punctuation">]</span> -eq $<span class="token punctuation">[</span>num2<span class="token punctuation">]</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">if</span> condition
+<span class="token keyword">then</span>
+    command1 
+    command2
+    <span class="token punctuation">..</span>.
+    commandN 
+</code></pre></div><p>fi  末尾if倒过来
+if else
+if else-if else</p> <ul><li>for 循环</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">for</span> <span class="token for-or-select variable">var</span> <span class="token keyword">in</span> item1 item2 <span class="token punctuation">..</span>. itemN
+<span class="token keyword">do</span>
+    command1
+    command2
+    <span class="token punctuation">..</span>.
+    commandN
+<span class="token keyword">done</span>
+</code></pre></div><ul><li>while 语句</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">while</span> condition
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">command</span>
+<span class="token keyword">done</span>
+</code></pre></div><ul><li>case</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token keyword">case</span> 值 <span class="token keyword">in</span>
+模式1<span class="token punctuation">)</span>
+    command1
+    command2
+    <span class="token punctuation">..</span>.
+    commandN
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+模式2）
+    command1
+    command2
+    <span class="token punctuation">..</span>.
+    commandN
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+</code></pre></div><p>跳出循环break
+跳出当前循环continue</p> <ul><li>函数</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function-name function">demoFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;这是我的第一个 shell 函数!&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;-----函数开始执行-----&quot;</span>
+demoFun
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;-----函数执行完毕-----&quot;</span>
+</code></pre></div><p>return语句</p> <ul><li><p>函数参数<br>
+funWithParam 1 2 3 4 5 6 7 8 9 34 73</p></li> <li><p>输出重定向<br>
+command1 &gt; file1  将输出重定向到 file。</p></li> <li><p>输入重定向<br>
+command1 &lt; file1  从file中输入</p></li> <li><p>文件包含  import<br>
+#使用 . 号来引用test1.sh 文件
+. ./test1.sh</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/nodejs/" class="prev">nodejs</a></span> <span class="next"><a href="/vue/base.html">基础</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="container" data-v-0178ff65><canvas id="live2d" width="280" height="250" class="live2d-right" data-v-0178ff65></canvas></div></div></div>
+    <script src="/assets/js/app.3bc00f3d.js" defer></script><script src="/assets/js/2.b3504eca.js" defer></script><script src="/assets/js/14.1ab4b124.js" defer></script>
+  </body>
+</html>

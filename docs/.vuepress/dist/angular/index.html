@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>资料整理</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.67967071.css" as="style"><link rel="preload" href="/assets/js/app.3bc00f3d.js" as="script"><link rel="preload" href="/assets/js/2.b3504eca.js" as="script"><link rel="preload" href="/assets/js/6.a681d768.js" as="script"><link rel="prefetch" href="/assets/js/10.e3709308.js"><link rel="prefetch" href="/assets/js/11.92c21dd8.js"><link rel="prefetch" href="/assets/js/12.6be84266.js"><link rel="prefetch" href="/assets/js/13.bd29dce9.js"><link rel="prefetch" href="/assets/js/14.1ab4b124.js"><link rel="prefetch" href="/assets/js/15.e1276eee.js"><link rel="prefetch" href="/assets/js/16.6ebabfb2.js"><link rel="prefetch" href="/assets/js/17.d987915a.js"><link rel="prefetch" href="/assets/js/18.36fe2855.js"><link rel="prefetch" href="/assets/js/19.39cef109.js"><link rel="prefetch" href="/assets/js/20.d4311a21.js"><link rel="prefetch" href="/assets/js/21.1d15e296.js"><link rel="prefetch" href="/assets/js/3.2aadfa07.js"><link rel="prefetch" href="/assets/js/4.d9354908.js"><link rel="prefetch" href="/assets/js/5.16e1a249.js"><link rel="prefetch" href="/assets/js/7.bae3f3a2.js"><link rel="prefetch" href="/assets/js/8.efc01769.js"><link rel="prefetch" href="/assets/js/9.9b130e8a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.67967071.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">资料整理</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/html/" class="sidebar-link">html</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/es6/" class="sidebar-link">es6</a></li><li><a href="/css/" class="sidebar-link">css</a></li><li><a href="/angular/" class="active sidebar-link">angular</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/rxjs/" class="sidebar-link">rxjs</a></li><li><a href="/git/" class="sidebar-link">git</a></li><li><a href="/webpack/" class="sidebar-link">webpack,gulp,grunt</a></li><li><a href="/gof/" class="sidebar-link">design patterns</a></li><li><a href="/nodejs/" class="sidebar-link">nodejs</a></li><li><a href="/linux/base.html" class="sidebar-link">shell</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><ul><li>路由不适用# 报错<br>
+解决: 在app.modules中添加provider, locationStrategy</li></ul> <h3 id="架构"><a href="#架构" class="header-anchor">#</a> 架构</h3> <p>模块<br>
+根模块  AppModule<br>
+declarations: 组件指令管道<br>
+exports:可用于其他模块的组件,declarations的子集<br>
+providers: 服务<br>
+bootstrap: 启动<br>
+组件, 模板, 元数据, 数据绑定, 指令, 服务, 依赖注入, 动画, 表单,<br>
+事件, http, 生命周期钩子, 管道, 路由器, 测试</p> <h3 id="路由"><a href="#路由" class="header-anchor">#</a> 路由</h3> <p>ng new router --routing 生成带路由的项目<br>
+Routes配置<br>
+RouterOutlet  占位<br>
+Router  路由对象<br>
+RouterLink 链接<br>
+ActivateRoute 当前激活的路由,保存url中的参数<br>
+this.router.navigate()<br>
+通配符** , 404, 放在路由最后面</p> <h4 id="查询参数中传递的数据"><a href="#查询参数中传递的数据" class="header-anchor">#</a> 查询参数中传递的数据</h4> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">[routerlink]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['/abc']<span class="token punctuation">&quot;</span></span> <span class="token attr-name">[queryParams]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{id:1}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>routerInfo<span class="token punctuation">:</span>ActivaterRoute
+<span class="token keyword">this</span><span class="token punctuation">.</span>routerInfo<span class="token punctuation">.</span>snapshot<span class="token punctuation">.</span>params
+</code></pre></div><p>路由路径中传递数据</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">[routerlink]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>['/abc', 1]<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>参数订阅,自身路由到自身时使用<br>
+this.ourterInfo.params.subscribe((params:Params)=&gt;{})<br>
+路由配置中的data参数<br>
+this.outerInfo.snapshot.data[0]['a']<br>
+重定向路由<br>
+路由配置中写{path: 'xx', redirectTo: '/home', pathMatch: ''}<br>
+pathMatch: full: 必须为'xx', prefix: 以xx开头的都可以<br>
+子路由: children<br>
+[routerLink]=&quot;./&quot;  ./表示当前路由下<br>
+辅助路由:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>aux<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span>
+{path: 'xxx', component: xxx, outlet: 'aux'}
+[routerLink]=&quot;[{outlets: {aux: 'consult'}}]&quot;
+[routerLink]=&quot;[{outlets: {aux: 'null'}}]&quot;
+</code></pre></div><p>primary属性指定主路由</p> <ul><li><p>路由守卫<br>
+canActive: 处理路由导航到某路由的情况, 如鉴权<br>
+canDeaActivate: 处理从当前路由离开的情况<br>
+Resolve: 路由激活前获取路由数据</p></li> <li><p>依赖注入<br>
+对象A依赖对象B, 对象A不需要去实例化对象B, 只需要声明自己需要B<br>
+控制反转: 实现了控制反转的框架叫做ioc容器<br>
+吧依赖的控制权从代码的内部转移到外部<br>
+控制反转是实现依赖注入的手段<br>
+只有声明了@injectable装饰器才能注入其他服务<br>
+@Component等都是@Injectable的子类</p></li> <li><p>提供器  uesProvider  useFactory useValue</p></li> <li><p>观察者模式<br>
+对象间一对多的依赖关系, 当一个对象的状态发生改变的时候,所有的依赖他的对象都会得到通知<br>
+Observable: 一组值或事件的集合<br>
+Observer: 一个毁掉函数的集合<br>
+Subscription 用于取消订阅<br>
+operaters: 操作符,纯粹的函数</p></li> <li><p>模板本地变量</p></li> <li><p>输入属性
+子组件属性@Input,在子组件的选择器上加加[attr]=</p></li> <li><p>输出属性<br>
+子组件中@Output<br>
+searchResult:EventEmitter&lt;泛型&gt;=new EventEmitter();<br>
+this.searchResult.emit(attr)<br>
+在父组件中<br>
+(searchResult)=&quot;searchHandler($event)&quot;<br>
+在父组件的class中<br>
+searchHandler(attr) {}</p></li> <li><p>中间人模式<br>
+父组件作为中间人在子组件传递消息</p></li></ul> <h5 id="钩子函数胡"><a href="#钩子函数胡" class="header-anchor">#</a> 钩子函数胡</h5> <p>组件初始化调用的钩子</p> <ol><li>constructor</li> <li>ngOnchanges: 只有有输入属性才会调用, 父组件初始化自组件的输入竖向,变量改变才会触发,引用度意向改变不会触发</li> <li>ngOnInit: 初始化路基有输入属性,就写在ngOnInit中</li> <li>ngDoCheck</li> <li>ngAfterContentInit 投影内容初始化</li> <li>ngAfterContentChecked  投影内容变更检测</li> <li>ngAfterVirewInit 视图初始化</li> <li>ngAfterViewChecked 视图变更检测<br>
+组件变更检测,只要有任何变化,check都会调用<br>
+ngOnChanges<br>
+ngDocheck<br>
+ngAfterContentChecked<br>
+ngAfterViewChecked<br>
+变更检测,任何组件发生改变,整个组件树都会检查<br>
+ngDoCheck<br>
+鼠标点击:键盘事件,属性改变都会触发</li></ol> <ul><li>@ViewChild('child1')<br>
+child1:Child1Component<br>
+子组件的模板变量</li> <li>view钩子<br>
+子组件初始化-&gt;子组件变更检测-&gt;父组件初始化-&gt;父组件变更检测<br>
+初始化只会调用一次,之后都是变更检测<br>
+angular禁止组件组装好后再更新视图, 不能再viewInit中改变视图, 要改变可以加一个setTimeOut,<br>
+viewchecked一样</li> <li>投影<br>
+ng-content指令,再运行时动态的改变组件的内容<br> <ng-content></ng-content><br>
+多个投影,用一个class作为标志</li></ul> <h5 id="模板式表单和响应式表单"><a href="#模板式表单和响应式表单" class="header-anchor">#</a> 模板式表单和响应式表单</h5> <p>FornsModule  ngForm  ngModel  ngModelGroup<br>
+ReactiveFormsModule</p> <h5 id="数据绑定"><a href="#数据绑定" class="header-anchor">#</a> 数据绑定</h5> <p>插值表达式{{}}<br>
+属性绑定 []<br>
+事件绑定 ()<br>
+[class.spacial]<br>
+[attr.colspan]<br>
+[style.color]<br>
+[(ng-model)]<br>
+*ngIf<br>
+[ngSwitch]<br>
+*ngFor</p> <ul><li>moduleId 用于解析样式表和模板的对应路径,只能在commonJs中使用,设置后从当前的component的ts文件开始查找styleUrls</li> <li>transform(array,field,keyword)</li> <li>html属性和dom属性<br>
+html属性值指定初始值, dom value property是当前值</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/css/" class="prev">css</a></span> <span class="next"><a href="/rxjs/">rxjs</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="container" data-v-0178ff65><canvas id="live2d" width="280" height="250" class="live2d-right" data-v-0178ff65></canvas></div></div></div>
+    <script src="/assets/js/app.3bc00f3d.js" defer></script><script src="/assets/js/2.b3504eca.js" defer></script><script src="/assets/js/6.a681d768.js" defer></script>
+  </body>
+</html>
