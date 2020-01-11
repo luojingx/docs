@@ -7,12 +7,13 @@
     "doc": "docs"
   },
   "dependencies": {
+    "opener": "^1.5.1",
     "vuepress": "^1.2.0",
     "vuepress-plugin-live2d": "0.0.7"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "vuepress dev docs",
+    "start": "opener http://localhost:8080 & vuepress dev docs",
     "build": "vuepress build docs"
   },
   "author": "",
